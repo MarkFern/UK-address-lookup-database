@@ -1,4 +1,7 @@
 # UK-address-lookup-database
+
+<BR>
+  
 - Database with data on :
 
   <table>
@@ -11,7 +14,9 @@
 </table>
 
 in the UK, that is useful for cleaning/validating/completing address data.
-</li></ul><BR>
+</li></ul>
+
+<BR>
 
 - The data is approximately up-to-date for Autumn 2019.
 
