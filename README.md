@@ -1,7 +1,7 @@
 # UK-address-lookup-database
-Database with data on :
+- Database with data on :
 
-<table>
+  <table>
   <tr>
     <td>countries</td><td>regions</td><td>counties</td><td>cities</td>
   </tr>
@@ -11,16 +11,17 @@ Database with data on :
 </table>
 
 in the UK, that is useful for cleaning/validating/completing address data.
+</li></ul>
 
-The data is approximately up-to-date for Autumn 2019.
+- The data is approximately up-to-date for Autumn 2019.
 
-See the ["Legal_Notice.html"](../Legal_Notice.html) file for:
+- See the ["Legal_Notice.html"](../Legal_Notice.html) file for:
 
-- the legal notice:
+  - the legal notice:
 
-  - attached to the database &nbsp;&nbsp;&nbsp;&nbsp;*AND*
-  - required for the CC BY-SA 3.0,
+    - attached to the database &nbsp;&nbsp;&nbsp;&nbsp;*AND*
+    - required for the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) licence,
 
-  ***as well as for***
+    ***as well as for***
 
-- information on the different sources used for the data.
+  - information on the different sources used for the data.
