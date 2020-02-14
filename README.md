@@ -2,7 +2,7 @@
 
 <BR>
   
-- Database with data on :
+- Database with [geospatial topological](https://en.wikipedia.org/wiki/Geospatial_topology) data on :
 
   <table>
   <tr>
