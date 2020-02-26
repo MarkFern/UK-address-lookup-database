@@ -50,6 +50,38 @@
 				</p>
 				<BR><HR><BR>
 				<p>
+					26.2.2020<BR><BR>
+					Have had issues with complying with the terms of CC BY-SA 3.0 licence. The first part of these issues, are discussed <A HREF="https://en.wikipedia.org/wiki/Wikipedia_talk:Reusing_Wikipedia_content#CC_BY-SA_3.0_licence_requirements_for_credits_in_adaptations/collections_that_also_has_credits_for_other_non-CC_works">here</A>.
+				</p>				
+				<p>
+					To address the first part of these issues, I've decided to download all the lists of contributors for every used page that is mentioned in the section dedicated to the material licensed under CC BY-SA 3.0. Then with those lists, I'll insert them into the section just mentioned, with the lists organised so that each list is displayed with the page for which the list is the contributor list.
+					Each contributor name in these lists, will also be a hyperlink to the Wikipedia user page for the contributor. This decision for addressing the first part of these issues, should provide sufficient 
+					credit, with the required level of prominence, with respect to complying with the CC BY-SA 3.0 licence. By following through with this decision, the first part of these issues will be completely addressed.<BR>
+					<BR>
+					<div style="margin-left: 25px;margin-top:0px;padding-top:0px">
+						<B>Example illustrating procedure to be used to get contributor lists at least for Wikipedia material (a similar procedure might also exist for Wikishire material)</B><BR><BR>				
+						<div style="margin-left: 30px;margin-top:0px;padding-top:0px">
+							To get the list of contributers to the Wikipedia Scotland page, first run:<BR>
+							<pre>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="https://en.wikipedia.org/w/api.php?action=query&prop=contributors&titles=Scotland&pclimit=500">https://en.wikipedia.org/w/api.php?action=query&prop=contributors&titles=Scotland&pclimit=500</A></pre>
+							Then keep on running :<BR>
+							<pre>&nbsp;&nbsp;&nbsp;&nbsp;https://en.wikipedia.org/w/api.php?action=query&prop=contributors&titles=Scotland&pclimit=500&pccontinue=??????</pre>
+							where ?????? is the pccontinue value returned by the previous GET request, until no pccontinue value is returned (also an empty batchcomplete value will also likely be returned at such time).<BR><BR>
+							<BR>
+							See:
+							<PRE>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="https://www.mediawiki.org/wiki/API:Main_page">https://www.mediawiki.org/wiki/API:Main_page</A></PRE>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and
+							<PRE>&nbsp;&nbsp;&nbsp;&nbsp;<A HREF="https://www.mediawiki.org/wiki/API:Contributors">https://www.mediawiki.org/wiki/API:Contributors</A></PRE>
+							for more information.<BR>
+							<BR><BR>
+							Unix command `wget` can be used for running the URLs and downloading the responses, but characters will have to be escaped accordingly.
+						</div>
+					</div>
+					<BR>
+					The second part of these issues relates to a mistake I made when adding the URLs for the CC BY-SA 3.0 credits. Some of the URLs I added (especially for certain Northern Ireland data), were erroneously the URLs for Wikipedia search results. I should instead have added the URLs of proper Wikipedia pages, as such search results merely compile snippets from proper Wikipedia pages (when there are search results). The search results aren't as such, seemingly, licensed under CC BY-SA 3.0 as a singular work, or at least, it's not clear exactly how such search results are licensed. Anyway, to address and remedy the second part of these issues, what I've done now is to go through all the search result URLs, and pick out "proper Wikipedia page" URLs that appear may have been used or could have been used for the related database data. These picked out URLs, now have been added to this licence statement (it took about half a day to do). Whilst it's not perfect, I think it's enough. It has to be remembered that more delays in the release of this database, deprives more the wider community of the benefit of it.
+					
+				</p>
+				<BR><HR><BR>
+				<p>
 					For GPLv3 licence to apply, we probably need to include on this web-page:
 					<ul>
 						<li>information telling users of the database that there is no warranty for the database,</li>
@@ -109,8 +141,6 @@
 					<BR><BR>
 					 On 7.2.2020, Mark finished reviewing all of his notes generated from previously processing the GPLv3 licence. So long as the database is released in 'source code' form, a copy of the GPLv3 licence accompanies the 'source code', and compliance is made with the notes in red ink at the beginning of this webpage, no more reviewing of the GPLv3 licence is needed.
 				</p>				
-				
-					
 			</div>
 			<BR>
 			<BR>
@@ -483,18 +513,31 @@
 									<li><A HREF="https://en.wikipedia.org/wiki/Lambeg,_County_Antrim">Lambeg, County Antrim</A></li>
 									<li><A HREF="https://en.wikipedia.org/wiki/List_of_towns_and_villages_in_Northern_Ireland">List of towns and villages in Northern Ireland</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Whiteabbey">Whiteabbey - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=WHITEABBEY%2C+Antrim&title=Special%3ASearch&go=Go&ns0=1">WHITEABBEY, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/County_Antrim">County Antrim</A></li>
+
 									 <li><A HREF="https://wikishire.co.uk/wiki/The_Temple,_County_Down">The Temple, County Down - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=THE+TEMPLE%2C+Down&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">THE TEMPLE, Down - Search results - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=THE+TEMPLE&fulltext=Search">Search results for THE TEMPLE - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=THE+DRY+ARCH%2C+Antrim&title=Special%3ASearch&go=Go&ns0=1">THE DRY ARCH, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_B_roads_in_Northern_Ireland">List of B roads in Northern Ireland</A></li>
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=THE+DRY+ARCH&title=Special%3ASearch&go=Go">Search results for THE DRY ARCH - Wikishire</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=THE+DRONES%2C+Antrim&title=Special%3ASearch&go=Go&ns0=1">THE DRONES, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_B_roads_in_Northern_Ireland?wprov=srpw1_16">List of B roads in Northern Ireland</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=THE+DRONES&fulltext=Search">Search results for THE DRONES - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=THE+DIAMOND&title=Special%3ASearch&go=Go">Search results for THE DIAMOND - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/The_Diamond,_County_Antrim">The Diamond, County Antrim - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Tedd">Tedd - Wikipedia</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=TEDD%2C+Fermanagh&title=Special:Search&go=Go&ns0=1&searchToken=6muebmuj2yvg7fr85dfzvjlba">TEDD, Fermanagh - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Tedd">Tedd</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Derryvullan">Derryvullan</A></li>									 
+									 
 									  <li><A HREF="https://wikishire.co.uk/w/index.php?search=TEDD&title=Special%3ASearch&go=Go">Search results for TEDD - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=SIX+ROAD+END%2C+Down&title=Special%3ASearch&go=Go&ns0=1">SIX ROAD END, Down - Search results - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=SIX+ROAD+END&title=Special%3ASearch&go=Go">Search results for SIX ROAD END - Wikishire</A></li>
@@ -502,57 +545,137 @@
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=NEW+FERRY%2C+Londonderry&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">NEW FERRY, Londonderry - Search results - Wikipedia</A></li>
 									  <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=NEW+FERRY&fulltext=Search">Search results for NEW FERRY - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=NEWFERRY&title=Special%3ASearch&go=Go">Search results for NEWFERRY - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=MULLAN%2C+Londonderry&title=Special%3ASearch&go=Go&ns0=1">MULLAN, Londonderry - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Mullan"></A>Mullan</li>
+
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=MULLAN&title=Special%3ASearch&go=Go">Search results for MULLAN - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=MUCKAMORE%2C+Antrim&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">MUCKAMORE, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/County_Antrim"></A>County Antrim</li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Antrim,_County_Antrim"></A>Antrim, County Antrim</li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_County_Antrim"></A>List of civil parishes of County Antrim</li>
+									 
 									 <li><A HREF="https://wikishire.co.uk/wiki/Muckamore">Muckamore - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=MUCKAMORE%2C+Antrim&title=Special%3ASearch&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1&wprov=acrw1_-1">MUCKAMORE, Antrim - Search results - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Mossley">Mossley - Wikishire</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=MOSSLEY%2C+Antrim&title=Special%3ASearch&go=Go&ns0=1">MOSSLEY, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Mossley_Hockey_Club">Mossley Hockey Club</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Mossley_railway_station_(Northern_Ireland)">Mossley railway station (Northern Ireland)</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/South_Antrim_(UK_Parliament_constituency)">South Antrim (UK Parliament constituency)</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lisburn_railway_station">Lisburn railway station</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Belfast%E2%80%93Larne_line">Belfast–Larne line</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/NI_Railways">NI Railways</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Ulster_Senior_League_(men%27s_hockey)">Ulster Senior League (men's hockey)</A></li>									 
+									 
 									 <li><A HREF="https://en.wikipedia.org/wiki/Monkstown">Monkstown - Wikipedia</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=MONKSTOWN%2C+Antrim&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1&searchToken=bvxbvafc2emk4gbuttcv68wk8">MONKSTOWN, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Monkstown,_County_Antrim">Monkstown, County Antrim</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Monkstown">Monkstown</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/The_Troubles_in_Newtownabbey">The Troubles in Newtownabbey</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Monkstown_railway_station_(Northern_Ireland)">Monkstown railway station (Northern Ireland)</A></li>									 
+									 
 									  <li><A HREF="https://wikishire.co.uk/wiki/Monkstown,_County_Antrim">Monkstown, County Antrim - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Monkstown">Monkstown - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=MONEYDIG%2C+Londonderry&title=Special%3ASearch&go=Go&ns0=1">MONEYDIG, Londonderry - Search results - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Moneydig">Moneydig - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Minterburn">Minterburn - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=MINTERBURN%2C+Tyrone&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">MINTERBURN, Tyrone - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_Irish_Presbyteries">List of Irish Presbyteries</A></li>									 									 
+									 
 									  <li><A HREF="https://wikishire.co.uk/wiki/Millbrook,_County_Antrim">Millbrook, County Antrim - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=MILLBROOK%2C+Antrim&title=Special%3ASearch&go=Go&ns0=1">MILLBROOK, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/BT_postcode_area">BT postcode area</A></li>
+
 									 <li><A HREF="https://wikishire.co.uk/wiki/Millbrook">Millbrook - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Mazetown">Mazetown - Wikipedia</A></li>
-									  <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=MAZETOWN%2C+Antrim&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1&searchToken=be4wrd82awhwrznlpvw1ekfmd">MAZETOWN, Antrim - Search results - Wikipedia</A></li>
-									  <li><A HREF="https://wikishire.co.uk/wiki/Lurgan">Lurgan - Wikishire</A></li>
+
+								    <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=MAZETOWN%2C+Antrim&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1&searchToken=be4wrd82awhwrznlpvw1ekfmd">MAZETOWN, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Mazetown">Mazetown</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Maze_(disambiguation)">Maze (disambiguation)</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_towns_and_villages_in_Northern_Ireland">List of towns and villages in Northern Ireland</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lurganure">Lurganure</A></li>									 
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lisburn">Lisburn</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Broomhedge">Broomhedge</A></li>
+									 
+								    <li><A HREF="https://wikishire.co.uk/wiki/Lurgan">Lurgan - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=LURGAN%2C+Armagh&title=Special%3ASearch&go=Go&ns0=1">LURGAN, Armagh - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lurgan">Lurgan</A></li>
+							 									 
 									 <li><A HREF="https://en.wikipedia.org/wiki/Derry">Derry - Wikipedia</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Antrim,_County_Antrim">Antrim, County Antrim - Wikipedia</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Derry?wprov=srpw1_0">Derry - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=LONDONDERRY%2C+Londonderry&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1&searchToken=4e3c1yoddk5nycx4x29xwhrb1">LONDONDERRY, Londonderry - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Derry">Derry</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Counties_of_Northern_Ireland">Counties of Northern Ireland</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Derry/Londonderry_name_dispute">Derry/Londonderry name dispute</A></li>									 
+
 									 <li><A HREF="https://wikishire.co.uk/wiki/Londonderry">Londonderry - Wikishire</A></li>
 									  <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=LONDONDERRY&fulltext=Search">Search results for LONDONDERRY - Wikishire</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=KINGSMILLS%2C+Armagh&title=Special%3ASearch&go=Go&ns0=1">KINGSMILLS, Armagh - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/BT_postcode_area">BT postcode area</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/The_Troubles_in_Bessbrook">The Troubles in Bessbrook</A></li>					 
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=KINGSMILLS&title=Special%3ASearch&go=Go">Search results for KINGSMILLS - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Kilraghts">Kilraghts - Wikipedia</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Killybegs">Killybegs - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/County_Donegal">County Donegal - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=KILLYBEGS%2C+Antrim&title=Special%3ASearch&go=Go&ns0=1">KILLYBEGS, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Killybegs">Killybegs</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/1588_in_Ireland">1588 in Ireland</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Durnan">Durnan</A></li>
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=KILLYBEGS&title=Special%3ASearch&go=Go">Search results for KILLYBEGS - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Gracehill">Gracehill - Wikipedia</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Garvaghey">Garvaghey - Wikipedia</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Garvaghy">Garvaghy - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=GARVAGHY%2C+Tyrone&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1&searchToken=evrzj0x0sfw2sw9058e2migwx">GARVAGHY, Tyrone - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Garvaghy">Garvaghy</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/McGivern">McGivern</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Garvaghey">Garvaghey</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_Ireland">List of civil parishes of Ireland</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/BT_postcode_area">BT postcode area</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_Irish_Presbyteries">List of Irish Presbyteries</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/wiki/Garvaghy">Garvaghy - Wikishire</A></li>
-									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=GARVAGHY%2C+Tyrone&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">GARVAGHY, Tyrone - Search results - Wikipedia</A></li>
 									  <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=GARVAGHY&fulltext=Search">Search results for GARVAGHY - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=GARRYDUFF%2C+Antrim&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">GARRYDUFF, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Malinky">Malinky</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_Irish_Presbyteries">List of Irish Presbyteries</A></li>									 
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=GARRYDUFF%2C+Antrim&title=Special%3ASearch&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1&wprov=acrw1_-1">GARRYDUFF, Antrim - Search results - Wikipedia</A></li>
+								    <li><A HREF="https://en.wikipedia.org/wiki/Malinky">Malinky</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_Irish_Presbyteries">List of Irish Presbyteries</A></li>									 
+
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=GALGORM&fulltext=Search">Search results for GALGORM - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=FLURRYBRIDGE%2C+Armagh&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">FLURRYBRIDGE, Armagh - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/My_Lagan_Love">My Lagan Love</A></li>
+									 
 									  <li><A HREF="https://wikishire.co.uk/w/index.php?search=FLURRYBRIDGE&title=Special%3ASearch&go=Go">Search results for FLURRYBRIDGE - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=FINNIS%2C+Down&title=Special%3ASearch&go=Go&ns0=1">FINNIS, Down - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Finnis_souterrain">Finnis souterrain</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/St._Michael%27s_Primary_School">St. Michael's Primary School</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Down">List of townlands in County Down</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/wiki/Finnis">Finnis - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Eden,_County_Antrim">Eden, County Antrim - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=EDEN%2C+Antrim&title=Special:Search&go=Go&ns0=1&searchToken=1yqnk5n2mtabl8gmpmo1bwo26">EDEN, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Eden">Eden</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Eden,_County_Antrim">Eden, County Antrim</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=EDEN&title=Special%3ASearch&go=Go">Search results for EDEN - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Dunmurry">Dunmurry - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Dundonald,_County_Down">Dundonald, County Down - Wikishire</A></li>
@@ -560,19 +683,44 @@
 									 <li><A HREF="https://wikishire.co.uk/wiki/Dunbarton,_County_Down">Dunbarton, County Down - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=DUNBARTON&title=Special%3ASearch&go=Go">Search results for DUNBARTON - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Drumahoe">Drumahoe - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=DERRYBOY%2C+Down&title=Special%3ASearch&go=Go&ns0=1">DERRYBOY, Down - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Strangford_(UK_Parliament_constituency)">Strangford (UK Parliament constituency)</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Down">List of townlands in County Down</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=DERRYBOY&title=Special%3ASearch&go=Go">Search results for DERRYBOY - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Cultra">Cultra - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=CULTRA%2C+Down&title=Special%3ASearch&go=Go&ns0=1">CULTRA, Down - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Cultra">Cultra</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Ulster_Folk_and_Transport_Museum">Ulster Folk and Transport Museum</A></li>									 
+									 
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=CULCAVY%2C+Down&title=Special%3ASearch&go=Go&ns0=1">CULCAVY, Down - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Hillsborough,_County_Down">Hillsborough, County Down</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_localities_in_Northern_Ireland_by_population">List of localities in Northern Ireland by population</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Down">List of townlands in County Down</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/BT_postcode_area">BT postcode area</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/wiki/Blaris">Blaris - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=CULCAVY&title=Special%3ASearch&go=Go">Search results for CULCAVY - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=CRAIGS%2C+Antrim&title=Special%3ASearch&go=Go&ns0=1">CRAIGS, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Craigs,_County_Antrim"></A>Craigs, County Antrim</li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_County_Antrim"></A>List of civil parishes of County Antrim</li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/wiki/Craigs">Craigs - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Craigavon">Craigavon - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Craigavad">Craigavad - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Clonfeacle">Clonfeacle - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=CLONFEACLE%2C+Tyrone&title=Special:Search&go=Go&ns0=1&searchToken=9j3q2d84kohvhlky6mq77ndlm">CLONFEACLE, Tyrone - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Clonfeacle"></A>Clonfeacle</li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lisgobban,_County_Tyrone"></A>Lisgobban, County Tyrone</li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_County_Tyrone"></A>List of civil parishes of County Tyrone</li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_Ireland"></A>List of civil parishes of Ireland</li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/South_Tyrone_(UK_Parliament_constituency)"></A>South Tyrone (UK Parliament constituency)</li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Drumskinny"></A>Drumskinny</li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=CLONFEACLE&title=Special%3ASearch&go=Go">Search results for CLONFEACLE - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/County_Armagh7">County Armagh - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Cloghy">Cloghy - Wikipedia</A></li>
@@ -590,62 +738,165 @@
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=CARNAGH%2C+Armagh&title=Special%3ASearch&go=Go&ns0=1">CARNAGH, Armagh - Search results - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=CARNAGH&title=Special%3ASearch&go=Go">Search results for CARNAGH - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Buckna">Buckna - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=BOVEVAGH%2C+Londonderry&title=Special%3ASearch&go=Go&ns0=1">BOVEVAGH, Londonderry - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Bovevagh">Bovevagh</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_Ireland">List of civil parishes of Ireland</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/wiki/County_Londonderry0">County Londonderry - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=BOVEVAGH&title=Special%3ASearch&go=Go">Search results for BOVEVAGH - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Bolea">Bolea - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Boho">Boho - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Boardmills">Boardmills - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=BISHOPS+COURT%2C+Down&title=Special%3ASearch&go=Go&ns0=1">BISHOPS COURT, Down - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Dunsfort,_County_Down">Dunsfort, County Down</A></li>
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=BISHOPS+COURT+Down&title=Special%3ASearch&go=Go">Search results for BISHOPS COURT Down - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=BISHOPS+COURT&title=Special%3ASearch&go=Go">Search results for BISHOPS COURT - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=BELTOY%2C+Antrim&title=Special%3ASearch&go=Go&ns0=1">BELTOY, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Antrim">List of townlands in County Antrim</A></li>
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=BELTOY&fulltext=Search">Search results for BELTOY - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=BELTOY%2C+Antrim&title=Special%3ASearch&go=Go">Search results for BELTOY, Antrim - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=BALLYWARD%2C+Down&title=Special%3ASearch&go=Go&ns0=1">BALLYWARD, Down - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/St._Matthew%27s">St. Matthew's</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/BT_postcode_area">BT postcode area</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/A50_road_(Northern_Ireland)">A50 road (Northern Ireland)</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Down">List of townlands in County Down</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/St._Mary%27s_School">St. Mary's School</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_primary_schools_in_Northern_Ireland">List of primary schools in Northern Ireland</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/wiki/Drumgooland">Drumgooland - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=BALLYWARD&title=Special%3ASearch&go=Go">Search results for BALLYWARD - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Ballylumford">Ballylumford - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Annadorn">Annadorn - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=AGIVEY&title=Special%3ASearch&go=Go">Search results for AGIVEY - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Ballyroney">Ballyroney - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=BALLYRONEY%2C+Down&title=Special%3ASearch&go=Go&ns0=1">BALLYRONEY, Down - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Ballyroney_Castle">Ballyroney Castle</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Thomas_Mayne_Reid">Thomas Mayne Reid</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Samuel_Neilson">Samuel Neilson</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Down">List of townlands in County Down</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Rutherford_Waddell">Rutherford Waddell</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_Irish_Presbyteries">List of Irish Presbyteries</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/BT_postcode_area">BT postcode area</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_primary_schools_in_Northern_Ireland">List of primary schools in Northern Ireland</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=BALLYRONEY%2C+Down&title=Special%3ASearch&go=Go">Search results for BALLYRONEY, Down - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Townland">Townland - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=BALLYLUMFORD%2C+Antrim&title=Special%3ASearch&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">BALLYLUMFORD, Antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Antrim">List of townlands in County Antrim</A></li>
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=BALLYLUMFORD%2C+Antrim&title=Special%3ASearch&go=Go">Search results for BALLYLUMFORD, Antrim - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Baileysmill">Baileysmill - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=BAILEYSMILL%2C+Down&title=Special%3ASearch&go=Go">Search results for BAILEYSMILL, Down - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=BAILEYSMILL%2C+Down&title=Special%3ASearch&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">BAILEYSMILL, Down - Search results - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=ANNADORN%2C+Down&title=Special%3ASearch&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">ANNADORN, Down - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Down">List of townlands in County Down</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=ANADORN&title=Special%3ASearch&go=Go&ns0=1">ANADORN - Search results - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/wiki/Special:Search?search=ANNADORN%2C+Down&go=Go&ns0=1&searchToken=8ydayiay9s6799j94nh2j8cfi">ANNADORN, Down - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Annadorn_Dolmen">Annadorn Dolmen</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Loughinisland">Loughinisland</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Down">List of townlands in County Down</A></li>
+									 									 
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=AGIVEY%2C+Londonderry&title=Special:Search&go=Go&ns0=1">AGIVEY, Londonderry - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_County_Londonderry">List of civil parishes of County Londonderry</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_Ireland">List of civil parishes of Ireland</A></li>									 
+									 
 									 <li><A HREF="https://en.wikipedia.org/wiki/Aghadowey">Aghadowey - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=AGHADOWEY%2C+Londonderry&title=Special:Search&go=Go&ns0=1&searchToken=9tnqq1o9ijq1nesjkaiz4urw6">AGHADOWEY, Londonderry - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Aghadowey">Aghadowey</A></li>									 
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_places_in_County_Londonderry">List of places in County Londonderry</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_County_Londonderry">List of civil parishes of County Londonderry</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Aghadowey_civil_parish">Aghadowey civil parish</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_towns_and_villages_in_Northern_Ireland">List of towns and villages in Northern Ireland</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/North_Londonderry_(UK_Parliament_constituency)">North Londonderry (UK Parliament constituency)</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Derry_Central_Railway">Derry Central Railway</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/wiki/Lambeg,_County_Antrim">Lambeg, County Antrim - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=LAMBEG%2C+antrim&title=Special:Search&go=Go&ns0=1&searchToken=9606eyc42bbyo9tbmiwx1mxbm">LAMBEG, antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lambeg,_County_Antrim">Lambeg, County Antrim</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lambeg">Lambeg</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lambeg_drum">Lambeg drum</A></li>									 
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lambeg_railway_station">Lambeg railway station</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_places_in_County_Antrim">List of places in County Antrim</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_County_Antrim">List of civil parishes of County Antrim</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Robert_Bruce_Bowers">Robert Bruce Bowers</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Thomas_McCloy">Thomas McCloy</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/wiki/Lisburn">Lisburn - Wikipedia</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/wiki/Special:Search?search=LISBURN%2C+antrim&go=Go&ns0=1&searchToken=5kas9nf9sp4bib5yune3w6q76">LISBURN, antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Lisburn">Lisburn</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/The_Troubles_in_Lisburn">The Troubles in Lisburn</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=EDEN+antrim&title=Special:Search&go=Go&ns0=1&searchToken=1c1ydbe87mwjkjnh58dvue7e8">EDEN antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Eden">Eden</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Eden,_County_Antrim">Eden, County Antrim</A></li>									 
+									 
 									 <li><A HREF="https://en.wikipedia.org/wiki/Millbank,_County_Antrim">Millbank, County Antrim - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=MILLBANK+antrim&title=Special:Search&go=Go&ns0=1&searchToken=a3hpaeaq2gpimml6eyzj3qjm">MILLBANK antrim - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Northern_Ireland">Northern Ireland</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/wiki/Millbank,_County_Antrim">Millbank, County Antrim - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=MILLBANK&fulltext=Search">Search results for MILLBANK - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=MILLBANK&title=Special%3ASearch&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">MILLBANK - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Northern_Ireland">Northern Ireland</A></li>									 
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=TEMPLEPATRICK&title=Special%3ASearch&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1">TEMPLEPATRICK - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Templepatrick">Templepatrick</A></li>									 
+									 <li><A HREF="https://en.wikipedia.org/wiki/The_Troubles_in_Templepatrick">The Troubles in Templepatrick</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Templepatrick_railway_station">Templepatrick railway station</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Templepatrick_Cricket_Club">Templepatrick Cricket Club</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_towns_and_villages_in_Northern_Ireland">List of towns and villages in Northern Ireland</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/County_Antrim">County Antrim</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_Irish_Presbyteries">List of Irish Presbyteries</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_civil_parishes_of_County_Antrim">List of civil parishes of County Antrim</A></li>									 
+									 
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=dry+arch&title=Special%3ASearch&go=Go&ns0=1">dry arch - Search results - Wikipedia</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/wiki/Dunadry">Dunadry - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/County_Antrim7">County Antrim - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Moss-side,_County_Antrim">Moss-side, County Antrim - Wikipedia</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Moss_Side">Moss Side - Wikipedia</A></li>
 									  <li><A HREF="https://en.wikipedia.org/wiki/Mossley">Mossley - Wikipedia</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Kells,_County_Antrim">Kells, County Antrim - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=%22KELLS+CONNOR%22&title=Special:Search&go=Go&ns0=1&searchToken=9l1ew601fpu5ugtwueqh1656s">\KELLS CONNOR - Search results - Wikipedia"</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_places_in_County_Antrim">List of places in County Antrim</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Kells,_County_Antrim">Kells, County Antrim</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Antrim_Lower">Antrim Lower</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Solar,_County_Antrim">Solar, County Antrim</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Moss-side,_County_Antrim">Moss-side, County Antrim</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Millbank,_County_Antrim">Millbank, County Antrim</A></li>									 
+									 
 									  <li><A HREF="https://en.wikipedia.org/wiki/Edenderry">Edenderry - Wikipedia</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?sort=relevance&search=cloghy&title=Special:Search&profile=advanced&fulltext=1&advancedSearch-current=%7B%7D&ns0=1&searchToken=dl703tvm6h2swddlovmodhygp">cloghy - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_towns_and_villages_in_Northern_Ireland">List of towns and villages in Northern Ireland</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/White_House,_County_Down">White House, County Down</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_places_in_County_Down">List of places in County Down</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/County_Down">County Down</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Down">List of townlands in County Down</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Bangor,_County_Down">Bangor, County Down</A></li>									 
+									 
 									  <li><A HREF="https://en.wikipedia.org/w/index.php?search=boveedy&title=Special%3ASearch&go=Go&ns0=1">boveedy - Search results - Wikipedia</A></li>
+									  
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=bovedy&title=Special%3ASearch&go=Go&ns0=1">bovedy - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/Bovedy_(meteorite)">Bovedy (meteorite)</A></li>
+									 
 									 <li><A HREF="https://en.wikipedia.org/wiki/Castlereagh">Castlereagh - Wikipedia</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Aghagallon">Aghagallon - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=AGHAGALLON&fulltext=Search">Search results for AGHAGALLON - Wikishire</A></li>
@@ -697,7 +948,9 @@
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=ARDMORE&title=Special%3ASearch&go=Go">Search results for ARDMORE - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Leitrim">Leitrim - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Drumbo">Drumbo - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=townloads+in+Fermanagh&title=Special:Search&go=Go&ns0=1&searchToken=c8fgrxahmgmvnzj6rfy0yjmdc">townloads in Fermanagh - Search results - Wikipedia</A></li>
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=LEGACURRY&title=Special%3ASearch&go=Go">Search results for LEGACURRY - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Balloo">Balloo - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=BALLOO&title=Special%3ASearch&go=Go">Search results for BALLOO - Wikishire</A></li>
@@ -709,7 +962,6 @@
 									 <li><A HREF="https://en.wikipedia.org/wiki/Glebe">Glebe - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Halftown">Halftown - Wikishire</A></li>
 									 <li><A HREF="https://en.wikipedia.org/wiki/Ballylesson">Ballylesson - Wikipedia</A></li>
-									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=&title=Special%3ASearch&go=Go">Search - Wikipedia</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?title=Special%3ASearch&profile=default&search=BALLYLESSON&fulltext=Search">Search results for BALLYLESSON - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=PARK&title=Special%3ASearch&go=Go">Search results for PARK - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Bellaghy">Bellaghy - Wikishire</A></li>
@@ -726,7 +978,10 @@
 									 <li><A HREF="https://wikishire.co.uk/wiki/Churchtown,_County_Antrim">Churchtown, County Antrim - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=CHURCHTOWN&title=Special%3ASearch&go=Go">Search results for CHURCHTOWN - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/wiki/Clogher">Clogher - Wikishire</A></li>
+
 									 <li><A HREF="https://en.wikipedia.org/w/index.php?search=ARTASOOLY&title=Special:Search&go=Go&ns0=1&searchToken=5wqmva3u0c0g1bwbi39im56k7">ARTASOOLY - Search results - Wikipedia</A></li>
+									 <li><A HREF="https://en.wikipedia.org/wiki/List_of_townlands_in_County_Armagh">List of townlands in County Armagh</A></li>									 
+									 
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=ARTASOOLY&title=Special%3ASearch&go=Go">Search results for ARTASOOLY - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=ARDTANAGH&title=Special%3ASearch&go=Go">Search results for ARDTANAGH - Wikishire</A></li>
 									 <li><A HREF="https://wikishire.co.uk/w/index.php?search=ARDGARVAN&title=Special%3ASearch&go=Go">Search results for ARDGARVAN - Wikishire</A></li>
