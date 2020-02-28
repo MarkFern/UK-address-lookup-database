@@ -19,40 +19,40 @@ more Page_1.json |  sed -E 's/^[[:space:]]*\{([[:space:]]*\"([^\"\\\cG\cH\cI\cJ\
 #           ([^\"\\\cG\cH\cI\cJ\cK\cL\cM\cZ\c[\x00]|\\([\"\\\/bfnrt]|u[0-9A-F]{4}))
 
 # `Sed` code for converting usernames JSON into a simple list of usernames.
-sed -E ':x 		
-					s/
-							^([[:space:]]*
-												(([^\"\\\cG\cH\cI\cJ\cK\cL\cM\cZ\c[\x00]|\\([\"\\\/bfnrt]|u[0-9A-F]{4}))+\n)*
-							  [[:space:]]*)?
-
-
-							 [[:space:]]*
-							 ,?
-							 [[:space:]]*
-							 \{
-									[[:space:]]*
-											\"userid\"
-											[[:space:]]*
-											:
-											[[:space:]]*
-											(\"([^\"\\\cG\cH\cI\cJ\cK\cL\cM\cZ\c[\x00]|\\([\"\\\/bfnrt]|u[0-9A-F]{4}))+\"|[0-9]+)
-									[[:space:]]*
-									,?
-									[[:space:]]*
-											\"name\"
-											[[:space:]]*
-											:
-											[[:space:]]*
-											\"
-												(([^\"\\\cG\cH\cI\cJ\cK\cL\cM\cZ\c[\x00]|\\([\"\\\/bfnrt]|u[0-9A-F]{4}))+)
-											\"
-											[[:space:]]*
-							\}
-							[[:space:]]*
-					  /
-							\1\8\n
-					  /i;
-			   t x'
+# sed -E ':x 		
+#					s/
+#							^([[:space:]]*
+#												(([^\"\\\cG\cH\cI\cJ\cK\cL\cM\cZ\c[\x00]|\\([\"\\\/bfnrt]|u[0-9A-F]{4}))+\n)*
+#							  [[:space:]]*)?
+#
+#
+#							 [[:space:]]*
+#							 ,?
+#							 [[:space:]]*
+#							 \{
+#									[[:space:]]*
+#											\"userid\"
+#											[[:space:]]*
+#											:
+#											[[:space:]]*
+#											(\"([^\"\\\cG\cH\cI\cJ\cK\cL\cM\cZ\c[\x00]|\\([\"\\\/bfnrt]|u[0-9A-F]{4}))+\"|[0-9]+)
+#									[[:space:]]*
+#									,?
+#									[[:space:]]*
+#											\"name\"
+#											[[:space:]]*
+#											:
+#											[[:space:]]*
+#											\"
+#												(([^\"\\\cG\cH\cI\cJ\cK\cL\cM\cZ\c[\x00]|\\([\"\\\/bfnrt]|u[0-9A-F]{4}))+)
+#											\"
+#											[[:space:]]*
+#							\}
+#							[[:space:]]*
+#					  /
+#							\1\8\n
+#					  /i;
+#			   t x'
 
 
 # REGULAR EXPRESSION FOR MATCHING BEGINNING OF JSON BEFORE CONTRIBUTOR NAMES BEGIN.
