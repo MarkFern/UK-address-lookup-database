@@ -27,7 +27,7 @@ in the UK, that is useful for cleaning/validating/completing address data.
   - the legal notice:
 
     - attached to the database &nbsp;&nbsp;&nbsp;&nbsp;*AND*
-    - required for the [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/) licence,
+    - required for the <sup><s>[CC BY-SA](https://creativecommons.org/licenses/by-sa/3.0/)</s></sup> licence(s),
 
     ***as well as for***
 
